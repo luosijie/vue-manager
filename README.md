@@ -173,11 +173,11 @@ export default {
 vm-table的可编辑模式可以实现数据的增删改,
 分别通过
 
-v-on:add-ok="add"
+增: v-on:add-ok="add"
 
-v-on:delete-ok="deletefn">
+删: v-on:delete-ok="deletefn">
 
-v-on:delete-ok="deletefn">
+改: v-on:delete-ok="deletefn">
 
 来实现
 
