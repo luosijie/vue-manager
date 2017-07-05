@@ -1,18 +1,13 @@
 <div align=center>
   <img width="400" height="400" src="https://github.com/luosijie/Front-end-Blog/blob/master/img/vm_logo.png?raw=true">
 </div>
-
 <div align=center>
-  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
-  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
-  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
-  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
+  <img src="https://img.shields.io/badge/Dependency-Vue2.0-yellow.svg?style=flat">
+  <img src="https://img.shields.io/badge/Dependency-iView-blue.svg?style=flat">
+  <img src="https://img.shields.io/badge/Dependency-ECharts-red.svg?style=flat">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat">
 </div>
 
-![Language:JavaScript](https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat)
-![Language:Node](https://img.shields.io/badge/Language-Node-green.svg?style=flat)
-![Database:MongoDB](https://img.shields.io/badge/Database-MongoDB-green.svg?style=flat)
-![License:GPL](https://img.shields.io/badge/License-GPL-blue.svg?style=flat)
 
 这是我在学完Vue后写的个人项目(也是我的第二个 个人项目), 在此分享给大家学习使用。
 这是一个以Vue2.0为框架，结合 iView 和 eCharts 的后台组件， 可以说是在 iView 基础上的进一步组件化。
