@@ -1,7 +1,7 @@
 <template>
   <Row class="vm-panel vm-timeline">
     <Row type="flex" justify="center" class="panel-heading">
-     时间轴
+     {{ title }}
     </Row>
     <ul class="panel-body">
       <li v-for="(item, index) in data">
