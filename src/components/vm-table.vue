@@ -37,7 +37,7 @@
         title="编辑"
         v-on:on-ok="editOk">
         <Form :label-width="50">
-          <Form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="item.id">
+          <Form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" >
             <Input v-model="dataEdit[key]" :placeholder="'请输入' + key"></Input>
           </Form-item>
         </Form>
@@ -47,7 +47,7 @@
         title="新增"
         v-on:on-ok="addOk">
         <Form :label-width="50">
-          <Form-item v-for="item in columns" :label="item.title" :key="item.id">
+          <Form-item v-for="item in columns" :label="item.title" >
             <Input v-model="dataAdd[item.key]" :placeholder="'请输入' + item.title"></Input>
           </Form-item>
         </Form>
