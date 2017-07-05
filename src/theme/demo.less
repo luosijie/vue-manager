@@ -1,0 +1,116 @@
+/*style for demo*/
+//variable
+@sidebar-width: 210px;
+@nav-height: 60px;
+
+body{
+  background-color: @background-color-base;
+}
+img{
+  border-radius: @btn-border-radius;
+}
+.vm-margin{
+  margin-top: 15px;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  .header{
+    z-index: 999;
+    width: 100%;
+    height: @nav-height;
+    top: 0;
+    position: fixed;
+    padding: 10px;
+    background: white;
+    .logo{
+      color: @link-color;
+      font-size: 20px;
+      font-weight: bold;
+      span{
+        color: @primary-color
+      }
+      img{
+        vertical-align: middle;
+      }
+    }
+    .login-info{
+      position: absolute;
+      right: 10px;
+      font-size: 18px;
+      img{
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+      button{
+        padding: 6px;
+      }
+      li{
+        i{
+          margin-right: 6px;
+        }
+      }
+    }
+    
+  }
+  .sidebar{
+    height: 100%;
+    width: @sidebar-width;
+    top: 0;
+    position: fixed;
+    background-color: @title-color;
+    li{
+      text-align: left;
+      a{
+        color: inherit;
+        display: inline-block;
+        i{
+          margin-right: 10px;
+        }
+      }
+    }
+    .menu{
+      margin-top: 70px;
+    }
+  }
+  .main-content{
+    margin-left: @sidebar-width;
+    &>div{
+      margin-top: @nav-height;
+      padding: 15px;
+    }
+  }
+}
+
+.demo-news{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel{
+  .demo-circle{
+    height: 250px;
+  }
+}
+
+.login, .lock-screen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.vm-author{
+  line-height: 45px;
+  font-size: 14px;
+  a{
+    color: @primary-color;
+  }
+}

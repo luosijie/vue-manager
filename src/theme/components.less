@@ -1,0 +1,540 @@
+/*customer theme for vm-manager*/
+@vm-grey: #99a9c0;
+@vm-grey-light: #f4f4f4;
+@vm-spacing-base: 15px;
+
+@border-split: 1px solid @border-color-split;
+@border-out: 1px solid @border-color-base;
+
+.vm-panel{
+  background-color: white;
+  text-align: left;
+  border-radius: @btn-border-radius;
+  .panel-heading{
+    text-align: left;
+    width: 100%;
+    border-bottom: @border-split;
+    padding:@vm-spacing-base;
+    font-weight: bold;
+  }
+  .panel-body{
+    padding: @vm-spacing-base;
+  }
+}
+  
+.vm-msg-push{
+  ul{
+    overflow: hidden;
+    li{
+      &:first-child{
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        background: @primary-color;
+        border-radius: 4px 4px 0 0;
+      }
+      img{
+        vertical-align: top;
+        border-radius: @btn-border-radius;
+        margin-right: 5px;
+      }
+      text-align: left;
+      .subject{
+        width: 200px;
+        display: inline-block;
+        .title{
+          line-height: 18px;
+          font-size: 16px;
+          font-weight: bold;
+          .time{
+            float: right;
+            font-size: 14px;
+            color: @vm-grey;
+          }
+        }
+        .message{
+            margin-top: 6px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }
+      }  
+    }  
+  }
+  .vm-badge{
+    border: 1px solid @border-color-base;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: @btn-border-radius;
+    cursor: pointer;
+  }  
+}
+
+.vm-state-overview{
+  background-color: white;
+  border-radius: 4px;
+  min-height: 100px;
+  overflow: hidden;
+  .symbol{
+    color: white;
+    font-size: 45px;
+    background-color: @primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .value{
+    color: @vm-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.vm-user-preview{
+  overflow: hidden;
+  .panel-heading{
+    display: flex;
+      img{
+      margin-right: @vm-spacing-base;
+    }
+    .title{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .name{
+        color: @primary-color;
+        font-size: 18px;
+      }
+      .role{
+        color: @vm-grey;
+      }
+    }
+  }
+  ul.content{
+    font-size: 12px;
+    li{
+      display: flex;
+      border-bottom: @border-split;
+      i{
+        color: @vm-grey;
+        font-size: 16px;
+        width: 10px;
+      }
+      padding: 0 @vm-spacing-base;
+      height: 45px;
+      line-height: 45px;
+      span{
+        flex-grow: 1;
+      }
+      span:first-child{
+        width: 20%;
+      }
+      span:nth-child(2){
+        width: 40%;
+      }
+      span:last-child{
+        text-align: right;
+        width: 40%;
+      }
+    }
+    li:last-child{
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+.vm-progress{
+  .panel-heading{
+    height: 80px;
+    color: @primary-color;
+    font-size: 16px;
+  }
+  table{
+    tr{
+      td{
+        padding: 0 15px;
+        font-size: 14px;
+      }
+      td:nth-child(2){
+        width: 15%;
+      }
+      td:last-child{
+        width: 40%;
+      }
+    }
+  }
+}
+
+.vm-timeline{
+  font-size: 14px;
+  .panel-heading{
+    color: @primary-color;
+    font-size: 16px; 
+  }
+  ul.panel-body{
+    li{
+      .left, .right{
+        flex-grow: 1;
+        width: calc(50% - 1px);
+        padding-bottom: 15px;
+      }
+      .left{
+        text-align: right;
+        padding-right: 30px;
+      }
+      .right{
+        text-align: left;
+        padding-left: 30px;
+      }
+      .content{
+        background-color: @vm-grey-light;
+        border-radius: @border-radius-small;
+      }
+      .split{
+        width: 2px;
+        background-color: @border-color-base;
+        height: inherit;
+        .dot-left, .dot-right{
+          display: inline-block;
+          position: relative;
+          width: 12px;
+          height: 12px;
+          color: @primary-color;
+          background-color: @primary-color;
+          border-radius: 50%;
+          margin: 20px 0 0 -5px;
+        }
+        .dot-left:before, .dot-right:before{
+          content: '';
+          border: 6px solid transparent;
+          position: absolute;
+        }
+        .dot-left:before{
+          border-left-color: inherit;
+          left: 8px;
+        }
+        .dot-right:before{
+          border-right-color: inherit;
+          right: 8px;
+        }
+      }
+      
+    }
+  }
+  
+}
+
+.vm-tabs{
+  .heading{
+    height: 55px;
+    border-radius: @border-radius-small @border-radius-small 0 0;
+    background-color: @primary-color;
+    line-height: 55px;
+    font-size: 16px;
+    color: white;
+    .icon{
+      display: inline-block;
+      text-align: center;
+      font-size: 18px;
+      width: 55px;
+      background: rgba(0,0,0,0.1);
+    }
+    .title{
+      margin-left: 10px;
+    }
+  }
+  .body{
+    position: relative;
+    overflow: hidden;
+    padding: @vm-spacing-base;
+    &>ul{
+      position: relative;
+      height: inherit;
+      &>li{
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+      }
+    }
+  }
+  .footer{
+    min-height: 60px;
+    line-height: 60px;
+    ul{
+      display: flex;
+      border-top: @border-split;
+      justify-content: space-around;
+      li{
+       text-align: center;
+       cursor: pointer;
+      }
+      li.active{
+        color: @primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.vm-weather{
+  .top{
+    color: white;
+    border-radius: @border-radius-small @border-radius-small 0 0;
+    background-color: @info-color;
+    text-align: center;
+    height: 130px;
+    i{
+      font-size: 60px;
+    }
+    .temprature{
+      font-size: 60px;
+    }
+  }
+  .bottom{
+     height: 73px;
+     font-size: 14px;
+     &>div{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      span{
+        color: @vm-grey;
+      }
+     }
+  }
+}
+
+.vm-table{
+  .control{
+    position: relative;
+    margin-bottom: @vm-spacing-base;
+    .table-style{
+      display: flex;
+      align-items: center;
+    }
+  }
+  .edit{
+    position: relative;
+    margin-bottom: @vm-spacing-base;
+    padding-top: @vm-spacing-base;
+    border-top: 1px dashed @border-color-split;
+  }
+  .footer{
+    margin-top: @vm-spacing-base;
+    .info-bar{
+      .input-number{
+        width: 60px; 
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.vm-state-group{
+  text-align: center;
+  padding: 15px;
+  .item{
+    float: left;
+    border-right: @border-split;
+    &:last-child{
+      border-right: none;
+    }
+    .icon{
+      font-size: 24px;
+    }
+    p{
+      font-size: 14px;
+      color: @vm-grey;
+    }
+  }
+}
+.vm-message-carousel{
+  .item{
+    padding: @vm-spacing-base;
+    .main{
+      padding: @vm-spacing-base;
+      position: relative;
+      &:before, &:after{
+        content: "\"";
+        position: absolute;
+        font-size: 28px;
+        font-weight: bold;
+        color: @primary-color;
+      }
+      &:before{
+        top: 0;
+        left: 0;
+      }
+      &:after{
+        bottom: 0;
+        right: 0;
+      }
+      .title{
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .content{
+        font-size: 16px;
+        margin: @vm-spacing-base 0;
+      } 
+    }
+    .from{
+      margin: 0 @vm-spacing-base;
+      img{
+        border-radius: 50%;
+        vertical-align: middle;
+        height: 40px;
+        margin-right: @vm-spacing-base;
+      }
+      .name{
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.vm-card-vertical{
+  .card-img{
+    img{
+      display: block;
+      width: 100%
+    }
+  }
+  .card-desc{
+    p{
+      font-size: 14px;
+      margin: 10px 0;
+      text-align: justify;
+    }
+  }
+}
+.vm-card-horizantal{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  padding: 0;
+  .card-img{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    img{
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .card-desc{
+    width: 50%;
+    p{
+      font-size: 14px;
+      margin: 10px 0;
+      text-align: justify;
+    }
+  }
+}
+
+.vm-circle{
+  padding: @vm-spacing-base;
+  &>div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title{
+    margin-bottom: 5px;
+  }
+  p{
+    font-size: 14px;
+  }
+}
+
+.vm-login{
+  width: 900px;
+  height: 400px;
+  &>div{
+    padding: 30px;
+  }
+  .login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .login-header{
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      span{
+        color: @primary-color;
+      }
+    }
+    .login-form{
+      input{
+        margin-bottom: 20px;
+        width: 100%;
+        height: 45px;
+      }
+      button{
+        height: 45px;
+        width: 100%;
+      }
+    }
+    .login-footer{
+      margin-top: 10px;
+      span.forget{
+        float: right;
+      }
+    }
+  }
+  .login-ad{
+    height: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 0 @btn-border-radius @btn-border-radius 0;
+    background: url("../assets/img/login-bg.jpg");
+    .photo-author{
+      position: absolute;
+      right: 6px;
+      bottom: 45px;
+    }
+  } 
+}
+
+.vm-lock-screen{
+    width: 600px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .company{
+      font-size: 16px;
+      font-weight: bold;
+      img{
+        vertical-align: middle;
+      }
+      span{
+        color: @primary-color;
+      }
+      margin-bottom: 50px;
+    }
+    .user{
+      margin-bottom: 50px;
+      p.name{
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    input{
+      margin-bottom: 10px;
+    }
+    button{
+      width: 300px;
+    }
+}
