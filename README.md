@@ -2,6 +2,13 @@
   <img width="400" height="400" src="https://github.com/luosijie/Front-end-Blog/blob/master/img/vm_logo.png?raw=true">
 </div>
 
+<div align=center>
+  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
+  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
+  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
+  <img src="https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat">
+</div>
+
 ![Language:JavaScript](https://img.shields.io/badge/Language-Javascript-yellow.svg?style=flat)
 ![Language:Node](https://img.shields.io/badge/Language-Node-green.svg?style=flat)
 ![Database:MongoDB](https://img.shields.io/badge/Database-MongoDB-green.svg?style=flat)
