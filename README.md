@@ -20,8 +20,8 @@
 ## 安装
 1. 安装 Node / npm(cnpm)
 2. git clone "https://github.com/luosijie/vue-manager"
-3. cpm install
-4. cpm run dev
+3. cnpm install
+4. npm run dev
 5. 访问 localhost:8080
 
 ## 依赖
