@@ -2,7 +2,7 @@
   <img width="400" height="400" src="https://github.com/luosijie/Front-end-Blog/blob/master/img/vm_logo.png?raw=true">
 </div>
 <div align=center>
-  ### Vue Panel Framework, [live Demo](https://luosijie.github.io/vue-manager/)
+Vue Panel Framework, <a href="https://luosijie.github.io/vue-manager/"></a>
 </div>
 <div align=center>
   <img src="https://img.shields.io/badge/Dependency-Vue2.0-yellow.svg?style=flat">
