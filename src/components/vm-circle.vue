@@ -20,11 +20,11 @@
     props: {
       title: {
         type: String,
-        default: '圆环进度标题'
+        default: 'Title'
       },
       usedName: {
         type: String,
-        default: '已使用'
+        default: 'Used'
       },
       usedValue: {
         type: Number,
@@ -32,7 +32,7 @@
       },
       restName: {
         type: String,
-        default: '未使用'
+        default: 'Rest'
       },
       restValue: {
         type: Number,

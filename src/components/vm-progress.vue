@@ -3,9 +3,9 @@
     <Row type="flex"  align="middle" justify="space-between" class="panel-heading">
       {{ title }}
       <Radio-group v-model="order" type="button" size="large" @on-change="handleSortData">
-        <Radio label="0">默认</Radio>
-        <Radio label="1">正序</Radio>
-        <Radio label="-1">倒序</Radio>
+        <Radio label="0"><i class="fa fa-bars"></i></Radio>
+        <Radio label="1"><i class="fa fa-sort-amount-asc"></i></Radio>
+        <Radio label="-1"><i class="fa fa-sort-amount-desc"></i></Radio>
       </Radio-group>
     </Row>
     <table> 
@@ -34,7 +34,7 @@
     props: {
       title: {
         type: String,
-        default: '工作进度'
+        default: 'Progress'
       },
       data: {
         type: Array,
@@ -42,7 +42,7 @@
           return [
             {
               name: 'JesseLuo',
-              tags: ['很帅', '逗比', '可以'],
+              tags: ['hansome', 'cool'],
               value: 100
             }
           ]

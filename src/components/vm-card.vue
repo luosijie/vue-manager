@@ -7,7 +7,7 @@
       <h2>{{ title }}</h2>
       <p>{{ desc }}</p>
       <a :href="to">
-        查看详情
+        more >
       </a>
     </div>
   </div>
@@ -22,7 +22,7 @@
       },
       title: {
         type: String,
-        default: '这是一个标题'
+        default: 'Title'
       },
       img: {
         type: String,
@@ -30,7 +30,7 @@
       },
       desc: {
         type: String,
-        default: 'JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎'
+        default: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s'
       },
       to: {
         type: String,

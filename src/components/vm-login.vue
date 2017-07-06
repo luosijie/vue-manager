@@ -6,13 +6,13 @@
        <p><span>VUE</span>MANAGER</p>
      </div>
      <div class="login-form">
-        <Input v-model="username" placeholder="请输入邮箱或手机号"></Input>
-        <Input v-model="password" placeholder="请输入密码"></Input>
-        <Button type="primary">登录</Button>
+        <Input v-model="username" placeholder="please enter username"></Input>
+        <Input v-model="password" type="password" placeholder="Please enter password"></Input>
+        <Button type="primary">Login</Button>
      </div>
      <div class="login-footer">
-       <Checkbox v-model="remenber">记住密码</Checkbox>
-       <span class="forget"><a href="#">忘记密码</a></span>
+       <Checkbox v-model="remenber">Remenber</Checkbox>
+       <span class="forget"><a href="#">Forget Password</a></span>
      </div>
    </Col>
    <Col span="14" class="login-ad">

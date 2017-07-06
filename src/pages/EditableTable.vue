@@ -1,6 +1,6 @@
 <template>
   <div class="basic-table">
-    <VmTable title="可编辑表格" 
+    <VmTable title="Editable Table" 
              type="edit" 
              :columns="dataColumns" 
              :data="dataTable"

@@ -8,8 +8,8 @@
      <img src="../assets/img/photo.jpg" height="100" alt="">
      <p class="name">JesseLuo</p>
    </div>
-   <Input v-model="password" placeholder="请输入解锁密码" :style="{ width: 300 + 'px' }"></Input>
-   <Button type="primary">登录</Button>
+   <Input v-model="password" placeholder="Please enter code" type="password" :style="{ width: 300 + 'px' }"></Input>
+   <Button type="primary">Enter</Button>
   </div>
 </template>
 <script>

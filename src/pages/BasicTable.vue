@@ -1,6 +1,6 @@
 <template>
   <div class="basic-table">
-    <VmTable title="基础表格" :columns="dataColumns" :data="dataTable"></VmTable>
+    <VmTable title="Basic Table" :columns="dataColumns" :data="dataTable"></VmTable>
   </div>
 </template>
 

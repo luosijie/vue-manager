@@ -2,31 +2,31 @@
   <div class="charts">
     <Row :gutter="16">
       <Col span="12">
-        <VmChartBarLine title="柱形图" :xAxisData="dataBar1.xAxisData" :series="dataBar1.series">
+        <VmChartBarLine title="Bar Chart" :xAxisData="dataBar1.xAxisData" :series="dataBar1.series">
         </VmChartBarLine>
       </Col>
       <Col span="12">
-        <VmChartBarLine  title="二维柱形图" :xAxisData="dataBar2.xAxisData" :series="dataBar2.series">
-        </VmChartBarLine>
-      </Col>
-    </Row>
-    <Row :gutter="16" class="vm-margin">
-      <Col span="12">
-        <VmChartBarLine title="折线图" :xAxisData="dataLine1.xAxisData" :series="dataLine1.series">
-        </VmChartBarLine>
-      </Col>
-      <Col span="12">
-        <VmChartBarLine title="二维折线图" :xAxisData="dataLine2.xAxisData" :series="dataLine2.series">
+        <VmChartBarLine  title="Bar Chart" :xAxisData="dataBar2.xAxisData" :series="dataBar2.series">
         </VmChartBarLine>
       </Col>
     </Row>
     <Row :gutter="16" class="vm-margin">
       <Col span="12">
-        <VmChartPie title="饼状图" :data="dataPie">
+        <VmChartBarLine title="Line Chart" :xAxisData="dataLine1.xAxisData" :series="dataLine1.series">
+        </VmChartBarLine>
+      </Col>
+      <Col span="12">
+        <VmChartBarLine title="Line Chart" :xAxisData="dataLine2.xAxisData" :series="dataLine2.series">
+        </VmChartBarLine>
+      </Col>
+    </Row>
+    <Row :gutter="16" class="vm-margin">
+      <Col span="12">
+        <VmChartPie title="Pie Chart" :data="dataPie">
         </VmChartPie>
       </Col>
       <Col span="12">
-        <VmChartRadar title="雷达图" :indicator="dataRadar.indicator" :data="dataRadar.data">
+        <VmChartRadar title="Radar Chart" :indicator="dataRadar.indicator" :data="dataRadar.data">
         </VmChartRadar>
       </Col>
     </Row>

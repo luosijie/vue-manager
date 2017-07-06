@@ -6,57 +6,66 @@
     <div class="panel-body">
       <Row type="flex" justify="space-between" class="control">
         <div class="table-style">
-          显示斑马纹 
+          <h3>Stripe</h3>
           <i-switch v-model="showStripe" style="margin: 0 30px 0 10px"></i-switch>
-          表格尺寸
+          <h3>Size</h3>
           <Radio-group v-model="tableSize" type="button" style="margin-left: 10px">
-            <Radio label="large">大</Radio>
-            <Radio label="default">中</Radio>
-            <Radio label="small">小</Radio>
+            <Radio label="large">Large</Radio>
+            <Radio label="default">Default</Radio>
+            <Radio label="small">Small</Radio>
           </Radio-group>
         </div>
         <div class="search-bar">
-          <Input placeholder="请输入..." v-model="keyword" style="width: 300px"></Input>
-          <Button type="ghost" @click="search"><i class="fa fa-search"></i> 搜索</Button>
+          <Input placeholder="Please enter ..." v-model="keyword" style="width: 300px"></Input>
+          <Button type="ghost" @click="search"><i class="fa fa-search"></i></Button>
         </div>
       </Row>
       <div class="edit" v-if="type === 'edit'">
-          <Button @click="modalAdd = true" ><i class="fa fa-plus"></i> 新增</Button>
-          <Button  :disabled="deleteDisabled" @click="modalDelete = true"><i class="fa fa-trash"></i> 删除</Button>
+          <Button @click="modalAdd = true" ><i class="fa fa-plus"></i> Add</Button>
+          <Button  :disabled="deleteDisabled" @click="modalDelete = true"><i class="fa fa-trash"></i> Delete</Button>
         </div>
       <Table :stripe="showStripe"   :size="tableSize" :columns="showColumns" :data="dataShow" @on-selection-change="selectChange"></Table>
       <Row type="flex" justify="space-between" class="footer">
         <div class="info-bar">
-          每页显示<Input-number class="input-number" v-model="showNum" :max="totalNum" :min="1" @on-change=" updateDataShow ">{{ showNum }}</Input-number>条
+          Show<Input-number class="input-number" v-model="showNum" :max="totalNum" :min="1" @on-change=" updateDataShow ">{{ showNum }}</Input-number>/ Page
         </div>
-        <Page :total="totalNum" :current="currentPage" :page-size="showNum" show-total @on-change=" pageChange "></Page>
+        <div class="page">
+          <span class="total">Total {{ totalNum }}</span><Page :total="totalNum" :current="currentPage" :page-size="showNum" @on-change=" pageChange "></Page>
+        </div>
+        
       </Row>
     </div>
     <Modal
         v-model="modalEdit"
-        title="编辑"
+        title="Edit"
+        ok-text="OK"
+        cancel-text="Cancel"
         v-on:on-ok="editOk">
         <Form :label-width="50">
           <Form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" >
-            <Input v-model="dataEdit[key]" :placeholder="'请输入' + key"></Input>
+            <Input v-model="dataEdit[key]" :placeholder="'Please enter' + key"></Input>
           </Form-item>
         </Form>
     </Modal>
     <Modal
         v-model="modalAdd"
-        title="新增"
+        title="Add"
+        ok-text="OK"
+        cancel-text="Cancel"
         v-on:on-ok="addOk">
         <Form :label-width="50">
           <Form-item v-for="item in columns" :label="item.title" >
-            <Input v-model="dataAdd[item.key]" :placeholder="'请输入' + item.title"></Input>
+            <Input v-model="dataAdd[item.key]" :placeholder="'Please enter' + item.title"></Input>
           </Form-item>
         </Form>
     </Modal>
     <Modal
         v-model="modalDelete"
-        title="删除"
+        title="Delete"
+        ok-text="OK"
+        cancel-text="Cancel"
         v-on:on-ok="deleteOk">
-        您确认要删除数据吗
+        Are you sure to delete this data?
     </Modal>
   </Row>
 </template>
@@ -67,7 +76,7 @@
     props: {
       title: {
         type: String,
-        default: '可编辑表格'
+        default: 'Basic Table'
       },
       type: String,
       columns: Array,
@@ -149,7 +158,7 @@
                 this.modalEdit = true
               }
             }
-          }, '编辑'),
+          }, 'Edit'),
           h('Button', {
             props: {
               type: 'error',
@@ -161,7 +170,7 @@
                 this.modalDelete = true
               }
             }
-          }, '删除')
+          }, 'Delete')
         ])
       },
       convertKey: function (value) {

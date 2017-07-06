@@ -4,7 +4,7 @@
           <i class="fa fa-bell"></i>
       </Badge>
       <Dropdown-menu slot="list">
-          <Dropdown-item>您有 {{ data.length }} 条未读消息</Dropdown-item>
+          <Dropdown-item>You have {{ data.length }} message!</Dropdown-item>
           <Dropdown-item divided v-for="item in data" :key="item.id">
             <img :src="item.image" height="40" alt="">
             <div class="subject">
@@ -15,7 +15,7 @@
               <p class="message">{{ item.message }}</p>
             </div>
           </Dropdown-item>
-          <Dropdown-item divided>查看更多消息</Dropdown-item>
+          <Dropdown-item divided>view more message</Dropdown-item>
       </Dropdown-menu>
   </Dropdown>
 </template>

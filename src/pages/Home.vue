@@ -12,8 +12,8 @@
             <Icon type="arrow-down-b"></Icon>
         </Button> 
         <Dropdown-menu slot="list">
-            <Dropdown-item divided><i class="fa fa-key"></i>注销</Dropdown-item>
-            <Dropdown-item divided><i class="fa fa-cog"></i>设置</Dropdown-item>
+            <Dropdown-item divided><i class="fa fa-key"></i>Log out</Dropdown-item>
+            <Dropdown-item divided><i class="fa fa-cog"></i>Setting</Dropdown-item>
         </Dropdown-menu>
       </Dropdown>
     </Row>   
@@ -92,31 +92,31 @@ export default {
           image: require('@/assets/img/photo.jpg'),
           from: 'JesseLuo',
           time: '2017-1-8',
-          message: '我方水晶正在遭受攻击我方水晶正在遭受攻击'
+          message: 'I like your website very much!'
         },
         {
           image: require('@/assets/img/photo.jpg'),
           from: 'JesseLuo',
           time: '2017-1-8',
-          message: '我方水晶正在遭受攻击我方水晶正在遭受攻击'
+          message: 'I like your website very much!'
         },
         {
           image: require('@/assets/img/photo.jpg'),
           from: 'JesseLuo',
           time: '2017-1-8',
-          message: '我方水晶正在遭受攻击我方水晶正在遭受攻击'
+          message: 'I like your website very much!'
         },
         {
           image: require('@/assets/img/photo.jpg'),
           from: 'JesseLuo',
           time: '2017-1-8',
-          message: '我方水晶正在遭受攻击我方水晶正在遭受攻击'
+          message: 'I like your website very much!'
         },
         {
           image: require('@/assets/img/photo.jpg'),
           from: 'JesseLuo',
           time: '2017-1-8',
-          message: '我方水晶正在遭受攻击我方水晶正在遭受攻击'
+          message: 'I like your website very much!'
         }
       ]
     }
