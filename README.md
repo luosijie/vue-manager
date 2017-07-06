@@ -1,6 +1,11 @@
 <div align=center>
   <img width="400" height="400" src="https://github.com/luosijie/Front-end-Blog/blob/master/img/vm_logo.png?raw=true">
+  <p>
+    <strong>Vue Panel Framework,</strong> <a href="https://luosijie.github.io/vue-manager/">Live Demo</a>
+  </p>
 </div>
+</div>
+<br>
 <div align=center>
   <img src="https://img.shields.io/badge/Dependency-Vue2.0-yellow.svg?style=flat">
   <img src="https://img.shields.io/badge/Dependency-iView-blue.svg?style=flat">
@@ -15,8 +20,6 @@
 默认的主题沿用vue的官方主题绿, logo的设计也是用 vue的官方logo 简单变形得到 M 的形状。
 
 希望可以帮助使用者快速搭建基于Vue2.0的管理后台。
-
-预览地址 [https://luosijie.github.io/vue-manager/](https://luosijie.github.io/vue-manager/#/)
 
 
 ## 安装
