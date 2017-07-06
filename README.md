@@ -1,8 +1,7 @@
 <div align=center>
   <img width="400" height="400" src="https://github.com/luosijie/Front-end-Blog/blob/master/img/vm_logo.png?raw=true">
+  <strong>Vue Panel Framework,</strong> <a href="https://luosijie.github.io/vue-manager/">Live Demo</a>
 </div>
-<div align=center>
-Vue Panel Framework, <a href="https://luosijie.github.io/vue-manager/">Live Demo</a>
 </div>
 <br>
 <div align=center>
