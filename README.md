@@ -16,7 +16,7 @@
 
 希望可以帮助使用者快速搭建基于Vue2.0的管理后台。
 
-预览地址 ![https://luosijie.github.io/vue-manager/](https://luosijie.github.io/vue-manager/#/)
+预览地址 [https://luosijie.github.io/vue-manager/](https://luosijie.github.io/vue-manager/#/)
 
 
 ## 安装
