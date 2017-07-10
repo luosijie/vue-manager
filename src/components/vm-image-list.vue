@@ -14,7 +14,7 @@
           <Input :max="40" :min="1" value="Number" v-model="showNum" class="input-number" @on-change=" updateDataShow "></Input>
           <span class="margin-end">/ Page</span>
           <span class="total">Total {{ data.length }}</span>
-          <Page :total="15" :current="currentPage" :page-size="12" @on-change=" pageChange "></Page>
+          <Page :total="data.length" :current="currentPage" :page-size="showNum" @on-change=" pageChange "></Page>
         </Row>
       </Row>
     </Row>

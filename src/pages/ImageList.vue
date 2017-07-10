@@ -16,8 +16,6 @@
             this.dataImageList.splice(i, 1)
           }
         }
-        console.log(data.id)
-        console.log(this.dataImageList.length)
       }
     },
     data: function () {
