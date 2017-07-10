@@ -11,10 +11,10 @@
         </div>
         <Row type="flex" align="middle" class="page">
           <span>Show</span>
-          <Input :max="40" :min="1" value="Number" v-model="showNum" class="input-number" @on-change=" updateDataShow "></Input>
+          <Input :max="40" :min="1" :number="true" v-model="showNum" class="input-number" @on-change=" updateDataShow "></Input>
           <span class="margin-end">/ Page</span>
           <span class="total">Total {{ data.length }}</span>
-          <Page :total="data.length" :current="currentPage" :page-size="showNum" @on-change=" pageChange "></Page>
+          <Page :total="data.length" :current="currentPage" :page-size="showNum" @on-change="pageChange"></Page>
         </Row>
       </Row>
     </Row>

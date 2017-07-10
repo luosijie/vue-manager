@@ -30,7 +30,8 @@
           Show<Input-number class="input-number" v-model="showNum" :max="data.length" :min="1" @on-change=" updateDataShow ">{{ showNum }}</Input-number>/ Page
         </div>
         <div class="page">
-          <span class="total">Total {{ data.length }}</span><Page :total="data.length" :current="currentPage" :page-size="showNum" @on-change=" pageChange "></Page>
+          <span class="total">Total {{ data.length }}</span>
+          <Page :total="data.length" :current="currentPage" :page-size="showNum" @on-change="pageChange"></Page>
         </div>
       </Row>
     </div>
