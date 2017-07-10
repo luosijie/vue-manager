@@ -26,12 +26,12 @@
     </Row>
     <Row :gutter="16" class="vm-margin">
       <Col span="6" v-for="item in dataCards1" :key="item.id">
-        <VmCard :title="item.title" :img="item.img" :desc="item.desc" :to="item.to"></VmCard>  
+        <VmCard :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"></VmCard>  
       </Col>
     </Row>
     <Row :gutter="16" class="vm-margin">
       <Col span="12" v-for="item in dataCards2" :key="item.id">
-        <VmCard type="horizantal" :title="item.title" :img="item.img" :desc="item.desc" :to="item.to"></VmCard>  
+        <VmCard type="horizantal" :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"></VmCard>  
       </Col>
     </Row>
   </div>
@@ -54,42 +54,48 @@
       return {
         dataCards1: [
           {
+            id: '1234567981',
             title: 'Title',
             img: require('@/assets/img/img-1.jpg'),
             desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
-            to: '#'
+            detailUrl: '#'
           },
           {
+            id: '1234567982',
             title: 'Title',
             img: require('@/assets/img/img-2.jpg'),
             desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
-            to: '#'
+            detailUrl: '#'
           },
           {
+            id: '1234567983',
             title: 'Title',
             img: require('@/assets/img/img-3.jpg'),
             desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
-            to: '#'
+            detailUrl: '#'
           },
           {
+            id: '1234567984',
             title: 'Title',
             img: require('@/assets/img/img-4.jpg'),
             desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
-            to: '#'
+            detailUrl: '#'
           }
         ],
         dataCards2: [
           {
+            id: '6541231',
             title: 'Title',
             img: require('@/assets/img/img-l-1.jpg'),
             desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
-            to: '#'
+            detailUrl: '#'
           },
           {
+            id: '6541232',
             title: 'Title',
             img: require('@/assets/img/img-l-2.jpg'),
             desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry,Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
-            to: '#'
+            detailUrl: '#'
           }
         ],
         dataStateGroup: [

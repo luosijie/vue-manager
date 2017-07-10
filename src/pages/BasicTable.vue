@@ -15,21 +15,25 @@
       return {
         dataColumns: [
           {
+            id: '2.140710',
             title: '编号',
             key: 'id',
             sortable: true
           },
           {
+            id: '2.140711',
             title: '姓名',
             key: 'name',
             sortable: true
           },
           {
+            id: '2.140712',
             title: '年龄',
             key: 'age',
             sortable: true
           },
           {
+            id: '2.140713',
             title: '地址',
             key: 'address',
             sortable: true

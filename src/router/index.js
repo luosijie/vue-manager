@@ -5,6 +5,7 @@ import Dashboard from '@/pages/Dashboard'
 import BasicTable from '@/pages/BasicTable'
 import EditableTable from '@/pages/EditableTable'
 import Widget from '@/pages/Widget'
+import ImageList from '@/pages/ImageList'
 import Charts from '@/pages/Charts'
 import Login from '@/pages/Login'
 import LockScreen from '@/pages/LockScreen'
@@ -23,6 +24,16 @@ export default new Router({
           component: Dashboard
         },
         {
+          path: 'widget',
+          name: 'Widget',
+          component: Widget
+        },
+        {
+          path: 'imagelist',
+          name: 'ImageList',
+          component: ImageList
+        },
+        {
           path: 'basic-table',
           name: 'BasicTable',
           component: BasicTable
@@ -31,11 +42,6 @@ export default new Router({
           path: 'editable-table',
           name: 'EditableTable',
           component: EditableTable
-        },
-        {
-          path: 'widget',
-          name: 'Widget',
-          component: Widget
         },
         {
           path: 'charts',

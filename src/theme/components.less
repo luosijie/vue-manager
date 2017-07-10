@@ -378,7 +378,7 @@
       }
       &:after{
         bottom: 0;
-        right: 0;
+        right: 15px;
       }
       .title{
         font-size: 16px;
@@ -407,9 +407,38 @@
 
 .vm-card-vertical{
   .card-img{
+    position: relative;
     img{
       display: block;
       width: 100%
+    }
+    .control{
+      position: absolute;
+      bottom: -20px;
+      right: 15px;
+      display: flex;
+      span{
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        background-color: @primary-color;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      span.edit{
+        background-color: @info-color;
+        a{
+          color: white;
+        }
+      }
+      span.delete{
+        background-color: @primary-color;
+      }
     }
   }
   .card-desc{
@@ -417,9 +446,13 @@
       font-size: 14px;
       margin: 10px 0;
       text-align: justify;
+      height: 84px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
+
 .vm-card-horizantal{
   overflow: hidden;
   position: relative;
@@ -544,4 +577,26 @@
     button{
       width: 300px;
     }
+}
+
+.vm-image-list{
+  .image-list-heading{
+    .page{
+      span{
+        margin-right: 10px;
+      }
+      span.margin-end{
+        margin-right: 20px;
+      }
+      .input-number{
+        width: 40px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .image-list{
+  }
+  .total{
+    margin-right: 15px;
+  }
 }

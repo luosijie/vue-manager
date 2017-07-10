@@ -1,14 +1,12 @@
 <template>
-  <div class="basic-table">
-    <VmTable title="Editable Table" 
-             type="edit" 
-             :columns="dataColumns" 
-             :data="dataTable"
-             v-on:add-ok="add"
-             v-on:edit-ok="edit"
-             v-on:delete-ok="deletefn">
-    </VmTable>
-  </div>
+  <VmTable title="Editable Table" 
+           type="edit" 
+           :columns="dataColumns" 
+           :data="dataTable"
+           v-on:add-ok="add"
+           v-on:edit-ok="edit"
+           v-on:delete-ok="deletefn">
+  </VmTable>
 </template>
 
 <script>
@@ -32,7 +30,6 @@
         })
       },
       deletefn: function (data) {
-        console.log(data)
         for (let i = 0; i < this.dataTable.length; i++) {
           for (let j = 0; j < data.length; j++) {
             if (this.dataTable[i].id === data[j].id) {

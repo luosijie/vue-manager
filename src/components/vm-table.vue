@@ -23,16 +23,15 @@
       <div class="edit" v-if="type === 'edit'">
           <Button @click="modalAdd = true" ><i class="fa fa-plus"></i> Add</Button>
           <Button  :disabled="deleteDisabled" @click="modalDelete = true"><i class="fa fa-trash"></i> Delete</Button>
-        </div>
-      <Table :stripe="showStripe"   :size="tableSize" :columns="showColumns" :data="dataShow" @on-selection-change="selectChange"></Table>
+      </div>
+      <Table :stripe="showStripe" :size="tableSize" :columns="showColumns" :data="dataShow" @on-selection-change="selectChange"></Table>
       <Row type="flex" justify="space-between" class="footer">
         <div class="info-bar">
-          Show<Input-number class="input-number" v-model="showNum" :max="totalNum" :min="1" @on-change=" updateDataShow ">{{ showNum }}</Input-number>/ Page
+          Show<Input-number class="input-number" v-model="showNum" :max="data.length" :min="1" @on-change=" updateDataShow ">{{ showNum }}</Input-number>/ Page
         </div>
         <div class="page">
-          <span class="total">Total {{ totalNum }}</span><Page :total="totalNum" :current="currentPage" :page-size="showNum" @on-change=" pageChange "></Page>
+          <span class="total">Total {{ data.length }}</span><Page :total="data.length" :current="currentPage" :page-size="showNum" @on-change=" pageChange "></Page>
         </div>
-        
       </Row>
     </div>
     <Modal
@@ -42,7 +41,7 @@
         cancel-text="Cancel"
         v-on:on-ok="editOk">
         <Form :label-width="50">
-          <Form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" >
+          <Form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="item.id">
             <Input v-model="dataEdit[key]" :placeholder="'Please enter' + key"></Input>
           </Form-item>
         </Form>
@@ -54,7 +53,7 @@
         cancel-text="Cancel"
         v-on:on-ok="addOk">
         <Form :label-width="50">
-          <Form-item v-for="item in columns" :label="item.title" >
+          <Form-item v-for="item in columns" :label="item.title" :key="item.id">
             <Input v-model="dataAdd[item.key]" :placeholder="'Please enter' + item.title"></Input>
           </Form-item>
         </Form>
@@ -87,7 +86,6 @@
         deleteDisabled: true,
         dataShow: [],
         showNum: 10,
-        totalNum: 0,
         showStripe: false,
         tableSize: 'default',
         currentPage: 1,
@@ -210,7 +208,6 @@
     },
     watch: {
       data: function () {
-        this.totalNum = this.data.length
         this.dataShow = this.data.slice(0, this.showNum)
       },
       dataDelete: function () {
@@ -222,7 +219,6 @@
       }
     },
     mounted: function () {
-      this.totalNum = this.data.length
       this.dataShow = this.data.slice(0, this.showNum)
     }
   }

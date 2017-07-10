@@ -32,38 +32,44 @@
               </router-link>
           </Menu-item>
           <Menu-item name="3">
+              <router-link to="/imagelist">
+                <i class="fa fa-photo"></i>
+                Image List  
+              </router-link>
+          </Menu-item>
+          <Menu-item name="4">
               <router-link to="/charts">
                 <i class="fa fa-bar-chart"></i>
                 Charts  
               </router-link>
           </Menu-item>
-          <Submenu name="4">
+          <Submenu name="5">
               <template slot="title">
                   <i class="fa fa-database"></i>
                   Data Table
               </template>
-              <Menu-item name="4-1">
+              <Menu-item name="5-1">
                 <router-link to="/basic-table">
                   Basic Table 
                 </router-link>
               </Menu-item>
-              <Menu-item name="4-2">
+              <Menu-item name="5-2">
                 <router-link to="/editable-table">
                   Editable Table  
                 </router-link>
               </Menu-item>
           </Submenu>
-          <Submenu name="5">
+          <Submenu name="6">
               <template slot="title">
-                  <i class="fa fa-dashboard"></i>
+                  <i class="fa fa-file"></i>
                   Pages
               </template>
-              <Menu-item name="5-1">
+              <Menu-item name="6-1">
                 <router-link to="/login">
                   Login 
                 </router-link>
               </Menu-item>
-              <Menu-item name="5-2">
+              <Menu-item name="6-2">
                 <router-link to="/lockscreen">
                   Lockscreen 
                 </router-link>
