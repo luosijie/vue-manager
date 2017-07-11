@@ -42,7 +42,7 @@
         cancel-text="Cancel"
         v-on:on-ok="editOk">
         <Form :label-width="50">
-          <Form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="item.id">
+          <Form-item v-for="(value, key) in dataEdit" :label="convertKey(key)" :key="dataEdit.id">
             <Input v-model="dataEdit[key]" :placeholder="'Please enter' + key"></Input>
           </Form-item>
         </Form>

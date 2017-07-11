@@ -20,7 +20,6 @@
     },
     data: function () {
       return {
-        keyword: '',
         dataImageList: [
           {
             id: '201707101552',

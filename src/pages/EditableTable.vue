@@ -43,18 +43,22 @@
       return {
         dataColumns: [
           {
+            id: '20156541',
             title: '编号',
             key: 'id'
           },
           {
+            id: '20156542',
             title: '姓名',
             key: 'name'
           },
           {
+            id: '20156543',
             title: '年龄',
             key: 'age'
           },
           {
+            id: '20156544',
             title: '地址',
             key: 'address'
           }
