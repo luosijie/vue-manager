@@ -1,36 +1,36 @@
 <template>
-  <div class="panel">
-    <Row>
+  <div class="widget">
+    <Row class="vm-margin">
       <VmStateGroup :data="dataStateGroup">
       </VmStateGroup>
     </Row>
-    <Row :gutter="16" class="vm-margin">
-      <Col span="12">
+    <Row :gutter="16">
+      <Col :lg="12">
         <VmCircle class="demo-circle" title="Oil capacity (L)" usedName="Consumed" :usedValue="70" restName="Rest" :restValue="20">
         </VmCircle>
       </Col>
-      <Col span="12">
+      <Col :lg="12">
         <VmCircle class="demo-circle" title="Oil capacity (L)" usedName="Consumed" :usedValue="70" restName="Rest" :restValue="0">
         </VmCircle>
       </Col>
     </Row>
-    <Row :gutter="16" class="vm-margin">
-      <Col span="12">
+    <Row :gutter="16">
+      <Col :lg="12">
         <VmMessageCarousel :data="dataMessageCarouse1">
         </VmMessageCarousel>
       </Col>
-      <Col span="12">
+      <Col :lg="12">
         <VmMessageCarousel :data="dataMessageCarouse1" :autoplay="false">
         </VmMessageCarousel>
       </Col>
     </Row>
-    <Row :gutter="16" class="vm-margin">
-      <Col span="6" v-for="item in dataCards1" :key="item.id">
+    <Row :gutter="16">
+      <Col :lg="6" v-for="item in dataCards1" :key="item.id">
         <VmCard :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"></VmCard>  
       </Col>
     </Row>
-    <Row :gutter="16" class="vm-margin">
-      <Col span="12" v-for="item in dataCards2" :key="item.id">
+    <Row :gutter="16">
+      <Col :lg="12" v-for="item in dataCards2" :key="item.id">
         <VmCard type="horizantal" :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"></VmCard>  
       </Col>
     </Row>

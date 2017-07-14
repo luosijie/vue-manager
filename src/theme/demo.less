@@ -78,7 +78,7 @@ img{
   .main-content{
     position: relative;
     margin-left: @sidebar-width;
-    padding: 75px 15px 15px 15px;
+    padding: 60px 15px 15px 15px;
   }
 }
 
@@ -110,5 +110,13 @@ img{
   font-size: 14px;
   a{
     color: @primary-color;
+  }
+}
+
+.dashboard, .widget, .charts{
+  &>.ivu-row{
+    &>.ivu-col{
+      margin-top: 15px;
+    }
   }
 }

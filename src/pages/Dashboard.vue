@@ -1,33 +1,33 @@
 <template>
   <div class="dashboard">
     <Row :gutter="16">
-      <Col span="6">
+      <Col :lg="6" :md="12">
         <VmStateOverView color="#41b883" icon="fa fa-user" title="New Users" count="996"></VmStateOverView>
       </Col>
-      <Col span="6">
+      <Col :lg="6" :md="12">
         <VmStateOverView color="#1d8ce0" icon="fa fa-eye" title="Page Views" count="109009"></VmStateOverView>
       </Col>
-      <Col span="6">
+      <Col :lg="6" :md="12">
         <VmStateOverView color="#ffa000" icon="fa fa-pencil" title="Comments" count="1010"></VmStateOverView>
       </Col>
-      <Col span="6">
+      <Col :lg="6" :md="12">
         <VmStateOverView color="#f60000" icon="fa fa-download" title="Downloads" count="9960"></VmStateOverView>
       </Col>
     </Row>
-    <Row :gutter="16" class="vm-margin">
-      <Col span="6">
+    <Row :gutter="16">
+      <Col :lg="6">
         <VmUserPreview :brief="dataUserPreview.brief" :property="dataUserPreview.property"></VmUserPreview>
       </Col>
-      <Col span="18">
+      <Col :lg="18">
         <VmProgress title="Working Progress" :data="dataProgress"></VmProgress>
       </Col>  
     </Row>
-    <Row :gutter="16" class="vm-margin">
-      <Col span="16">
+    <Row :gutter="16">
+      <Col :lg="16">
         <VmTimeline title="Timeline" :data="dataTimeline">
         </VmTimeline>
       </Col>
-      <Col span="8">
+      <Col :lg="8">
         <VmTabs icon="fa fa-user" title="Briefs" content-height="200px">
           <VmTabsItem label="Social" name="01">
             <div class="demo-news">

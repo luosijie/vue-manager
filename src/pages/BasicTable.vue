@@ -1,5 +1,5 @@
 <template>
-  <div class="basic-table">
+  <div class="basic-table vm-margin">
     <VmTable title="Basic Table" :columns="dataColumns" :data="dataTable"></VmTable>
   </div>
 </template>

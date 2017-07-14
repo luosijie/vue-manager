@@ -5,7 +5,8 @@
            :data="dataTable"
            v-on:add-ok="add"
            v-on:edit-ok="edit"
-           v-on:delete-ok="deletefn">
+           v-on:delete-ok="deletefn"
+           class="vm-margin">
   </VmTable>
 </template>
 

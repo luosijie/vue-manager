@@ -10,7 +10,7 @@
         </VmChartBarLine>
       </Col>
     </Row>
-    <Row :gutter="16" class="vm-margin">
+    <Row :gutter="16">
       <Col span="12">
         <VmChartBarLine title="Line Chart" :xAxisData="dataLine1.xAxisData" :series="dataLine1.series">
         </VmChartBarLine>
@@ -20,7 +20,7 @@
         </VmChartBarLine>
       </Col>
     </Row>
-    <Row :gutter="16" class="vm-margin">
+    <Row :gutter="16">
       <Col span="12">
         <VmChartPie title="Pie Chart" :data="dataPie">
         </VmChartPie>
