@@ -25,7 +25,7 @@
       </Col>
     </Row>
     <Row :gutter="16">
-      <Col :lg="6" v-for="item in dataCards1" :key="item.id">
+      <Col :lg="6" :md="12" v-for="item in dataCards1" :key="item.id">
         <VmCard :title="item.title" :img="item.img" :desc="item.desc" :detailUrl="item.detailUrl"></VmCard>  
       </Col>
     </Row>
