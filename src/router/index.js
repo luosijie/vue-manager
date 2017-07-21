@@ -20,7 +20,7 @@ export default new Router({
       children: [
         {
           path: '/',
-          name: 'dashboard',
+          name: 'Dashboard',
           component: Dashboard
         },
         {
@@ -59,7 +59,7 @@ export default new Router({
     },
     {
       path: '/lockscreen',
-      name: 'LockScreen',
+      name: 'Lockscreen',
       components: {
         blank: LockScreen
       }

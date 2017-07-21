@@ -18,58 +18,58 @@
       </Dropdown>
     </Row>   
     <div class="sidebar">
-      <Menu theme="dark" width="100%" class="menu">
-          <Menu-item name="1">
+      <Menu theme="dark" width="100%" class="menu" :active-name="activeName" :accordion="true">
+          <Menu-item name="Dashboard">
               <router-link to="/">
                 <i class="fa fa-dashboard"></i>
                 Dashboard  
               </router-link>
           </Menu-item>
-          <Menu-item name="2">
+          <Menu-item name="Widget">
               <router-link to="/widget">
                 <i class="fa fa-cogs"></i>
                 Widget  
               </router-link>
           </Menu-item>
-          <Menu-item name="3">
+          <Menu-item name="ImageList">
               <router-link to="/imagelist">
                 <i class="fa fa-photo"></i>
                 Image List  
               </router-link>
           </Menu-item>
-          <Menu-item name="4">
+          <Menu-item name="Charts">
               <router-link to="/charts">
                 <i class="fa fa-bar-chart"></i>
                 Charts  
               </router-link>
           </Menu-item>
-          <Submenu name="5">
+          <Submenu name="DataTable">
               <template slot="title">
                   <i class="fa fa-database"></i>
                   Data Table
               </template>
-              <Menu-item name="5-1">
+              <Menu-item name="BasicTable">
                 <router-link to="/basic-table">
                   Basic Table 
                 </router-link>
               </Menu-item>
-              <Menu-item name="5-2">
+              <Menu-item name="EditableTable">
                 <router-link to="/editable-table">
                   Editable Table  
                 </router-link>
               </Menu-item>
           </Submenu>
-          <Submenu name="6">
+          <Submenu name="Pages">
               <template slot="title">
                   <i class="fa fa-file"></i>
                   Pages
               </template>
-              <Menu-item name="6-1">
+              <Menu-item name="Login">
                 <router-link to="/login">
                   Login 
                 </router-link>
               </Menu-item>
-              <Menu-item name="6-2">
+              <Menu-item name="Lockscreen">
                 <router-link to="/lockscreen">
                   Lockscreen 
                 </router-link>
@@ -91,8 +91,12 @@ export default {
   components: {
     VmMsgPush
   },
+  mounted: function () {
+    this.activeName = this.$route.name
+  },
   data () {
     return {
+      activeName: 'Dashboard',
       msgPushData: [
         {
           image: require('@/assets/img/photo.jpg'),

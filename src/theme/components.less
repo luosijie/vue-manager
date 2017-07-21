@@ -311,10 +311,14 @@
 .vm-table{
   .control{
     position: relative;
+    margin-top: -@vm-spacing-base;
     margin-bottom: @vm-spacing-base;
     .table-style{
       display: flex;
       align-items: center;
+    }
+    &>div{
+      margin-top: @vm-spacing-base;
     }
   }
   .edit{
@@ -594,7 +598,11 @@
       }
     }
   }
-  .image-list{
+  .panel-body{
+    margin-top: -@vm-spacing-base;
+    &>div{
+      margin-top: @vm-spacing-base;
+    }
   }
   .total{
     margin-right: 15px;
