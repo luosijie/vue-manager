@@ -31,6 +31,12 @@
                 Widget  
               </router-link>
           </Menu-item>
+          <Menu-item name="Panels">
+              <router-link to="/panels">
+                <i class="fa fa-database"></i>
+                Panels
+              </router-link>
+          </Menu-item>
           <Menu-item name="ImageList">
               <router-link to="/imagelist">
                 <i class="fa fa-photo"></i>

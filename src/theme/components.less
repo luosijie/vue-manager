@@ -13,12 +13,14 @@
   .panel-heading{
     text-align: left;
     width: 100%;
+    border-radius: 4px 4px 0 0;
     border-bottom: @border-split;
     padding:@vm-spacing-base;
     font-weight: bold;
   }
   .panel-body{
     padding: @vm-spacing-base;
+    font-size: 14px;
   }
 }
   
@@ -597,11 +599,11 @@
         margin-right: 10px;
       }
     }
-  }
-  .panel-body{
-    margin-top: -@vm-spacing-base;
-    &>div{
-      margin-top: @vm-spacing-base;
+    .panel-body{
+      margin-top: -@vm-spacing-base;
+      &>div{
+        margin-top: @vm-spacing-base;
+      }
     }
   }
   .total{
