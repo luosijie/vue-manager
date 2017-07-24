@@ -28,7 +28,7 @@
 3. ECharts
 
 ## Global style
-> You can define you own style by overriding less file theme/index.less
+> You can define your own style by overriding less file theme/index.less
 
 ![theme](https://github.com/luosijie/Front-end-Blog/blob/master/img/theme.PNG?raw=true)
 
