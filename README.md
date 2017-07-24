@@ -7,61 +7,40 @@
 </div>
 <br>
 <div align=center>
-  <img src="https://img.shields.io/badge/Dependency-Vue2.0-yellow.svg?style=flat">
-  <img src="https://img.shields.io/badge/Dependency-iView-blue.svg?style=flat">
-  <img src="https://img.shields.io/badge/Dependency-ECharts-red.svg?style=flat">
+  <img src="https://img.shields.io/badge/Dependency-Vue2.3.3-yellow.svg?style=flat">
+  <img src="https://img.shields.io/badge/Dependency-iView2.0.0-blue.svg?style=flat">
+  <img src="https://img.shields.io/badge/Dependency-ECharts3.6.2-red.svg?style=flat">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat">
 </div>
 
 <br>
 
-这是一个以Vue2.0为框架，结合 iView 和 ECharts 的后台组件， 可以说是在 iView 基础上的进一步组件化。
-
-默认的主题沿用vue的官方主题绿, logo的设计也是用 vue的官方logo 简单变形得到 M 的形状。
-
-希望可以帮助使用者快速搭建基于Vue2.0的管理后台。
-
-
-## 安装
-1. 安装 Node / npm(cnpm)
+## Install
+1. install node / npm(cnpm)
 2. git clone "https://github.com/luosijie/vue-manager"
 3. cnpm install
 4. npm run dev
-5. 访问 localhost:8080
+5. visit localhost:8080
 
-## 依赖
+## Dependency
 1. Vue2.0
 2. iView
 3. ECharts
 
-## 实现的功能
-> 目前实现一些基本的信息展示和数据表格操作组件，希望以后有机会继续增加
-1. 信息总览
-2. 用户面板
-3. 工作进度
-4. 时间轴
-5. 天气面板
-6. 留言面板
-7. 基本表格
-8. 可编辑表格
-9. 图表
-10. ...
-
-## 全局样式定义
-> 全局样式的自定义沿用iView的主题定制方法, 可在文件夹src下的theme/index.less定义样式
+## Global style
+> You can define you own style by overriding less file theme/index.less
 
 ![theme](https://github.com/luosijie/Front-end-Blog/blob/master/img/theme.PNG?raw=true)
 
 ![index.less](https://github.com/luosijie/Front-end-Blog/blob/master/img/them-index.PNG?raw=true)
 
-## 组件使用
-> 每个组件都有完整的UI样式和基本的交互，使用者只需要在组件外部绑定数据即可
-### 目录
+## Usage of componets
+
+### Components list
 
 ![组件目录](https://github.com/luosijie/Front-end-Blog/blob/master/img/vm-componets.PNG?raw=true)
 
-### 举例
-> 具体每个组件的使用可以查看Demo(项目文件夹的 Src目录) 和 vm-组件里的props属性
+### Example
 #### vm-progress
 
 ![vm-progress](https://github.com/luosijie/Front-end-Blog/blob/master/img/vm-progress.PNG?raw=true)
@@ -175,16 +154,6 @@ export default {
 }
 ```
 ### vm-table
-vm-table的可编辑模式可以实现数据的增删改,
-分别通过
-
-增: v-on:add-ok="add"
-
-删: v-on:delete-ok="deletefn">
-
-改: v-on:delete-ok="deletefn">
-
-来实现
 
 ![vm-table](https://github.com/luosijie/Front-end-Blog/blob/master/img/vm-table.PNG?raw=true)
 
@@ -258,4 +227,3 @@ export default {
   }
 }
 ```
-> 先这样了 欢迎大家star
