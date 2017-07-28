@@ -62,7 +62,8 @@
         // 刻度颜色
         axisColor: '#797979',
         // 分割线颜色
-        splitLineColor: '#dcdcdc'
+        splitLineColor: '#dcdcdc',
+        chart: null
       }
     },
     computed: {
@@ -78,23 +79,36 @@
         return legendData
       }
     },
-    mounted: function () {
-      // 初始化echart
-      var chartPie = echarts.init(document.getElementById(this.id))
-      // 自定义eChart样式 官方配置指南(http://echarts.baidu.com/option.html#yAxis.splitLine.lineStyle.color)
-      chartPie.setOption({
-        title: { text: this.title },
-        grid: {
-          left: 30,
-          right: 15
-        },
-        color: this.color,
-        tooltip: {},
-        series: {
-          type: 'pie',
-          data: this.data
+    methods: {
+      renderChart: function () {
+        if (this.chart) {
+          this.chart.dispose()
         }
-      })
+        // 初始化echart
+        this.chart = echarts.init(document.getElementById(this.id))
+        // 自定义eChart样式 官方配置指南(http://echarts.baidu.com/option.html#yAxis.splitLine.lineStyle.color)
+        this.chart.setOption({
+          title: { text: this.title },
+          grid: {
+            left: 30,
+            right: 15
+          },
+          color: this.color,
+          tooltip: {},
+          series: {
+            type: 'pie',
+            data: this.data
+          }
+        })
+      }
+    },
+    watch: {
+      data: function () {
+        this.renderChart()
+      }
+    },
+    mounted: function () {
+      this.renderChart()
     }
   }
 </script>

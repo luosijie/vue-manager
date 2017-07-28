@@ -72,7 +72,8 @@
         splitLineColor: {
           type: String,
           default: '#dcdcdc'
-        }
+        },
+        chart: null
       }
     },
     computed: {
@@ -88,45 +89,61 @@
         return legendData
       }
     },
-    mounted: function () {
-      // 初始化echart
-      var chartBar = echarts.init(document.getElementById(this.id))
-      // 自定义eChart样式 官方配置指南(http://echarts.baidu.com/option.html#yAxis.splitLine.lineStyle.color)
-      chartBar.setOption({
-        title: { text: this.title },
-        legend: {
-          icon: 'circle',
-          data: this.legendData,
-          bottom: 0
-        },
-        grid: {
-          left: 30,
-          right: 15
-        },
-        color: this.color,
-        tooltip: {},
-        xAxis: {
-          data: this.xAxisData,
-          axisLine: {
-            lineStyle: {
-              color: this.axisColor
-            }
-          }
-        },
-        yAxis: {
-          axisLine: {
-            lineStyle: {
-              color: this.axisColor
+    methods: {
+      renderChart: function () {
+        if (this.chart) {
+          this.chart.dispose()
+        }
+        // 初始化echart
+        this.chart = echarts.init(document.getElementById(this.id))
+        // 自定义eChart样式 官方配置指南(http://echarts.baidu.com/option.html#yAxis.splitLine.lineStyle.color)
+        this.chart.setOption({
+          title: { text: this.title },
+          legend: {
+            icon: 'circle',
+            data: this.legendData,
+            bottom: 0
+          },
+          grid: {
+            left: 30,
+            right: 15
+          },
+          color: this.color,
+          tooltip: {},
+          xAxis: {
+            data: this.xAxisData,
+            axisLine: {
+              lineStyle: {
+                color: this.axisColor
+              }
             }
           },
-          splitLine: {
-            lineStyle: {
-              color: '#dcdcdc'
+          yAxis: {
+            axisLine: {
+              lineStyle: {
+                color: this.axisColor
+              }
+            },
+            splitLine: {
+              lineStyle: {
+                color: '#dcdcdc'
+              }
             }
-          }
-        },
-        series: this.series
-      })
+          },
+          series: this.series
+        })
+      }
+    },
+    watch: {
+      xAxisData: function () {
+        this.renderChart()
+      },
+      series: function () {
+        this.renderChart()
+      }
+    },
+    mounted: function () {
+      this.renderChart()
     }
   }
 </script>
