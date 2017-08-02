@@ -37,6 +37,12 @@
                 Panels
               </router-link>
           </Menu-item>
+          <Menu-item name="Editor">
+              <router-link to="/editor">
+                <i class="fa fa-pencil"></i>
+                Editor
+              </router-link>
+          </Menu-item>
           <Menu-item name="ImageList">
               <router-link to="/imagelist">
                 <i class="fa fa-photo"></i>

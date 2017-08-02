@@ -6,6 +6,7 @@ import BasicTable from '@/pages/BasicTable'
 import EditableTable from '@/pages/EditableTable'
 import Widget from '@/pages/Widget'
 import Panels from '@/pages/Panels'
+import Editor from '@/pages/Editor'
 import ImageList from '@/pages/ImageList'
 import Charts from '@/pages/Charts'
 import Login from '@/pages/Login'
@@ -33,6 +34,11 @@ export default new Router({
           path: 'panels',
           name: 'Panels',
           component: Panels
+        },
+        {
+          path: 'editor',
+          name: 'Editor',
+          component: Editor
         },
         {
           path: 'imagelist',
