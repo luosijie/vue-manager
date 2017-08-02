@@ -22,7 +22,6 @@ export default {
   },
   methods: {
     setHtml: function (data) {
-      console.log(data)
       this.bindHtml = data
     }
   }
