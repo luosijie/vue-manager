@@ -1,8 +1,8 @@
 <template>
   <div class="vm-editor-menu">
-        <VmEditorButton icon="fa fa-paragraph" @click.native="execCommand('formatBlock', '<p>')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-paragraph" @click.native="execCommand('formatBlock', '<p>')"></VmEditorButton>
         <VmEditorButton>
-          <VmEditorDropdown>
+          <VmEditorDropdown icon="iconfont icon-font-heading">
             <ul class="vm-editor-ul">
               <li @click="execCommand('formatBlock', '<h1>')">
                 <h1>H1</h1>
@@ -22,7 +22,7 @@
             </ul>
           </VmEditorDropdown>
         </VmEditorButton>
-        <VmEditorButton icon="fa fa-font">
+        <VmEditorButton icon="iconfont icon-font-size">
           <VmEditorDropdown>
             <ul class="vm-editor-ul">
               <li @click="execCommand('fontSize', 7)">
@@ -49,11 +49,11 @@
             </ul>
           </VmEditorDropdown>
         </VmEditorButton>
-        <VmEditorButton icon="fa fa-bold" @click.native="execCommand('bold')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-italic" @click.native="execCommand('italic')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-underline" @click.native="execCommand('underline')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-strikethrough" @click.native="execCommand('strikeThrough')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-adjust">
+        <VmEditorButton icon="iconfont icon-bold" @click.native="execCommand('bold')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-italic" @click.native="execCommand('italic')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-underline" @click.native="execCommand('underline')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-strikethrough" @click.native="execCommand('strikeThrough')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-font-color">
           <VmEditorDropdown>
             <VmEditorFontcolor></VmEditorFontcolor>
           </VmEditorDropdown>
@@ -61,38 +61,38 @@
 
         <span class="line"></span>
 
-        <VmEditorButton icon="fa fa-list-ol" @click.native="execCommand('insertOrderedList')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-list-ul" @click.native="execCommand('insertUnorderedList')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-quote-left"  @click.native="execCommand('formatBlock', '<blockquote>')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-code" @click.native="execCommand('formatBlock', '<pre>')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-ol" @click.native="execCommand('insertOrderedList')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-ul" @click.native="execCommand('insertUnorderedList')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-quote"  @click.native="execCommand('formatBlock', '<blockquote>')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-code" @click.native="execCommand('formatBlock', '<pre>')"></VmEditorButton>
         <!-- <VmEditorButton icon="fa fa-table"></VmEditorButton> -->
 
         <span class="line"></span>
 
-        <VmEditorButton icon="fa fa-image">
+        <VmEditorButton icon="iconfont icon-image">
           <VmEditorDropdown>
             <VmEditorAddimage></VmEditorAddimage>
           </VmEditorDropdown>
         </VmEditorButton>
         
-        <VmEditorButton icon="fa fa-link">
+        <VmEditorButton icon="iconfont icon-link">
           <VmEditorDropdown>
             <VmEditorAddlink></VmEditorAddlink>
           </VmEditorDropdown>
         </VmEditorButton>
-        <VmEditorButton icon="fa fa-minus" @click.native="execCommand('insertHorizontalRule')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-line" @click.native="execCommand('insertHorizontalRule')"></VmEditorButton>
 
         <span class="line"></span>
         
-        <VmEditorButton icon="fa fa-align-center" @click.native="execCommand('justifyCenter')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-align-left" @click.native="execCommand('justifyLeft')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-align-right" @click.native="execCommand('justifyRight')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-align-justify" @click.native="execCommand('justifyFull')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-align-center" @click.native="execCommand('justifyCenter')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-align-left" @click.native="execCommand('justifyLeft')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-align-right" @click.native="execCommand('justifyRight')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-justify" @click.native="execCommand('justifyFull')"></VmEditorButton>
 
         <span class="line"></span>
         
-        <VmEditorButton icon="fa fa-eraser" @click.native="execCommand('removeFormat')"></VmEditorButton>
-        <VmEditorButton icon="fa fa-trash" @click.native="execCommand('delete')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-eraser" @click.native="execCommand('removeFormat')"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-trash" @click.native="execCommand('delete')"></VmEditorButton>
         <slot></slot>
   </div>
 </template>

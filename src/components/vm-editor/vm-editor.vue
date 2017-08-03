@@ -2,17 +2,16 @@
   <div class="vm-editor">
     <VmEditorMenu>
       <div class="global-control">
-        <VmEditorButton icon="fa fa-cloud-upload" @click.native="uploadHtml"></VmEditorButton>
+        <VmEditorButton icon="iconfont icon-cloudupload" @click.native="uploadHtml"></VmEditorButton>
       </div>
     </VmEditorMenu>
     <div class="vm-editor-html" contenteditable="true">
-      
         Please Enter ...
-      
     </div>
   </div>
 </template>
 <style lang="less">
+  @import url('iconfont/iconfont.css');
   .vm-editor{
     background-color: white;
     border-radius: 4px;
