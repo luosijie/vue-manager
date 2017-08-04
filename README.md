@@ -8,7 +8,7 @@
 <br>
 <div align=center>
   <img src="https://img.shields.io/badge/Dependency-Vue2.3.3-yellow.svg?style=flat">
-  <img src="https://img.shields.io/badge/Dependency-iView2.0.0-blue.svg?style=flat">
+  <img src="https://img.shields.io/badge/Dependency-iView2.0-blue.svg?style=flat">
   <img src="https://img.shields.io/badge/Dependency-ECharts3.6.2-red.svg?style=flat">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat">
 </div>
