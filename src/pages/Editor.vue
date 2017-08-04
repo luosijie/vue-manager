@@ -1,13 +1,20 @@
 <template>
   <div class="editor">
-    <VmPanel title="Preview" class="vm-margin">
-      <div v-html="bindHtml"></div>
-    </VmPanel>
-    <VmEditor class="vm-margin" @upload="setHtml"></VmEditor>
+    <div class="vm-panel vm-margin">
+      <div class="panel-heading">
+        Preview
+      </div>
+      <div v-html="bindHtml">
+        
+      </div>
+    </div>
+    <VmEditor class="vm-margin" @upload="setHtml">
+    </VmEditor>
   </div>
 </template>
 <script>
-import VmEditor from '@/components/vm-editor/vm-editor'
+// import VmEditor from '@/components/vm-editor/vm-editor'
+import VmEditor from 'vm-editor'
 import VmPanel from '@/components/vm-panel'
 export default {
   name: 'editor',
@@ -17,7 +24,7 @@ export default {
   },
   data: function () {
     return {
-      bindHtml: 'Try upload button down right...'
+      bindHtml: ''
     }
   },
   methods: {

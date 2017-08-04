@@ -14,6 +14,7 @@
     "echarts": "^3.6.2",
     "iview": "^2.0.0-rc.17",
     "style-loader": "^0.18.2",
+    "vm-editor": "0.0.2",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1"
   },
