@@ -8,7 +8,7 @@
         
       </div>
     </div>
-    <VmEditor class="vm-margin" @upload="setHtml">
+    <VmEditor width="100%" class="vm-margin" @upload="setHtml">
     </VmEditor>
   </div>
 </template>

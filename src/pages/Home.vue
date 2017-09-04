@@ -86,6 +86,11 @@
                   Lockscreen 
                 </router-link>
               </Menu-item>
+              <Menu-item name="Loading">
+                <router-link to="/loading">
+                  Loading
+                </router-link>
+              </Menu-item>
           </Submenu>
       </Menu>
     </div>

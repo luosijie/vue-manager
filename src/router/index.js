@@ -11,6 +11,7 @@ import ImageList from '@/pages/ImageList'
 import Charts from '@/pages/Charts'
 import Login from '@/pages/Login'
 import LockScreen from '@/pages/LockScreen'
+import Loading from '@/pages/Loading'
 
 Vue.use(Router)
 
@@ -75,36 +76,13 @@ export default new Router({
       components: {
         blank: LockScreen
       }
+    },
+    {
+      path: '/loading',
+      name: 'Loading',
+      components: {
+        blank: Loading
+      }
     }
   ]
 })
-
-// export default new Router({
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'Dashboard',
-//       component: Dashboard
-//     },
-//     {
-//       path: '/basic-table',
-//       name: 'BasicTable',
-//       component: BasicTable
-//     },
-//     {
-//       path: '/editable-table',
-//       name: 'EditableTable',
-//       component: EditableTable
-//     },
-//     {
-//       path: '/widget',
-//       name: 'Widget',
-//       component: Widget
-//     },
-//     {
-//       path: '/charts',
-//       name: 'Charts',
-//       component: Charts
-//     }
-//   ]
-// })
