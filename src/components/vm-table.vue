@@ -151,9 +151,10 @@
             on: {
               click: () => {
                 for (let i in params.row) {
-                  this.dataEdit[i] = params.row[i]
+                  if (i !== '_index' && i !== '_rowKey') {
+                    this.dataEdit[i] = params.row[i]
+                  }
                 }
-                delete this.dataEdit._index
                 this.modalEdit = true
               }
             }
