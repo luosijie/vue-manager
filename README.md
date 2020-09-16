@@ -25,7 +25,7 @@
 ## 依赖
 1. Vue2.0
 2. iView
-3. ECharts
+3. [Apache ECharts (incubating)](https://github.com/apache/incubator-echarts)
 
 ## 全局样式
 > 你可以通过修改less文件 theme/index.less 来自定义全局样式
